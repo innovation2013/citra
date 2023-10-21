@@ -435,9 +435,9 @@ System::ResultStatus System::Init(Frontend::EmuWindow& emu_window,
         registered_image_interface = std::make_shared<Frontend::ImageInterface>();
     }
 
-    if(!custom_tex_manager){
-        custom_tex_manager = std::make_unique<VideoCore::CustomTexManager>(*this);
-    }
+    if (!custom_tex_manager) {
+         custom_tex_manager = std::make_unique<VideoCore::CustomTexManager>(*this);
+     }
 
     VideoCore::Init(emu_window, secondary_window, *this);
 
