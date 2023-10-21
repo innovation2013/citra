@@ -29,6 +29,7 @@ Memory::MemorySystem* g_memory;
 /// Initialize the video core
 void Init(Frontend::EmuWindow& emu_window, Frontend::EmuWindow* secondary_window,
           Core::System& system) {
+    if (g_renderer)return;
     g_memory = &system.Memory();
     Pica::Init();
 
